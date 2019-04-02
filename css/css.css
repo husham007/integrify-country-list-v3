@@ -1,0 +1,173 @@
+/* Author: Husham */
+
+/* Global settings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  line-height: 62.5%;
+}
+
+body {
+  /*font-size: calc(8px + (16 - 8) * ((100vw - 150px) / (1600 - 150)));*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafbfc;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Body */
+
+.wrapper {
+  width: 100%;
+  border: 0px solid green;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  border: 0px solid green;
+  padding-left: 10%;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  -webkit-text-stroke: 0.45px;
+  position: fixed;
+}
+
+.header-text {
+  line-height: 4vw;
+  font-size: 2.5rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.header-text-list {
+  color: tomato;
+}
+
+.main {
+  width: 100%;
+}
+
+.menu {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 4rem;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 4rem 4rem;
+  line-height: 5rem;
+  box-shadow: 5px 5px lightgrey;
+}
+
+.input-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.input-text {
+  width: 100%;
+  background: #fafbfc;
+  padding: 2rem;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+.icon {
+  color: tomato;
+  background-color: #fafbfc;
+  padding-top: 1rem;
+}
+
+.radio-wrapper {
+  text-align: center;
+  background-color: #fafbfc;
+  margin-top: 2rem;
+  border: 0px solid green;
+  display: flex;
+  padding: 0 10%;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.radio-wrapper div {
+  flex: 1;
+}
+
+.radio-wrapper label {
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  /*margin-right: 2rem; */
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+
+.text-wrapper {
+  text-align: center;
+  background-color: #fafbfc;
+  margin-top: 2rem;
+}
+
+/* Countries */
+
+.countries-wrapper {
+  display: flex;
+  width: 80%;
+
+  margin: 0 auto;
+  justify-content: space-around;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 15rem;
+  margin: 2rem;  
+  justify-content: center;
+  text-align: center;
+  border: 0px solid green;
+}
+
+.country div {
+  flex: 1;
+  margin: 1rem;
+  border: 0px solid red;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+}
+
+.result-red {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.result-green {
+  color: green;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>World Country List</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/css.css" />
+    
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header header-text">
+        <span>Country</span><span class="header-text-list">List</span>
+      </header>
+      <section class="main">
+        <section class="menu">
+          <div class="input-wrapper">
+            <input type="text" class="input-text" placeholder=' Search countries by name, capital, languages '/>
+            <i class="fas fa-search fa-4x icon"></i>
+          </div>
+
+          <div class="radio-wrapper">
+            <div>
+              <input type="radio" name="search-param" id="start" value="start" checked/>
+              <label for="start">Starting Word</label>
+            </div>
+            <div>               
+              <i class="fas fa-sort-alpha-down fa-4x icon"></i>
+            </div>
+            <div>
+              <input type="radio" name="search-param" id="include" value="include" />
+              <label for="include">Including Word</label>
+            </div>
+            <div>
+              <div><button class="sort-name">Sort By Name <i class="fas fa-sort-alpha-down fa-2x icon"></i></button></div>
+              <div><button class="sort-capital">Sort By Capital <i class="fas fa-sort-alpha-down fa-2x icon"></i></button></div>
+              <div><button class="sort-population">Sort By Population <i class="fas fa-sort-alpha-down fa-2x icon"></i></button></div>
+            </div>
+           
+          </div>
+
+          <div class="text-wrapper">
+            <span class="result">Result</span>
+          </div>
+
+          <div class="text-wrapper">
+              <span class="error"></span>
+            </div>
+
+        </section>
+      </section>
+
+      <section class = 'countries-wrapper'>        
+      </section>
+      <!--
+        <div>
+          <span>Total Number of Countries 193</span>
+          <br />
+          <span id="result"></span>
+        </div>
+
+        <div>
+          <button class="btn btn-start">Search with Starting letters(s)</button>
+          <button class="btn btn-search">Search with any letter(s)</button>
+          <button class="btn btn-sort">Sort</button>
+        </div>
+      </div>
+      <div>
+        <input type="text" placeholder="Search country" />
+      </div>
+
+      <div class="main-countries"></div>
+
+      -->
+    </div>
+    <script src="./scripts/script.js" type="module"></script>
+    
+  </body>
+</html>
