@@ -1,5 +1,5 @@
-# Filter Countries-v-2
-This to learn DOM, Fetch API, JSON, Importing/exporting Modules by building a web app that filters countries
+# Filter Countries-v-3
+This to learn Classes, DOM, Fetch API, JSON, Importing/exporting Modules by building a web app that filters countries
 # Technologies 
 - HTML
 - CSS
@@ -9,4 +9,4 @@ This to learn DOM, Fetch API, JSON, Importing/exporting Modules by building a we
 # Author
 #### Husham
 # DEMO
-[DEMO]( https://husham007.github.io/integrify-country-list-v2/)
+[DEMO]( https://husham007.github.io/integrify-country-list-v3/)
