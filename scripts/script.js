@@ -19,24 +19,26 @@ export let countries = [];
 export const sortName = document.querySelector(".sort-name");
 export const sortCapital = document.querySelector(".sort-capital");
 export const sortPopulation= document.querySelector(".sort-population");
+export const select = document.getElementById('list');
 
 
 const url = "https://restcountries.eu/rest/v2/all"; // countries data
 
 
-const app = new App(url);
+export const app = new App(url);
 
 //console.log(app);
 
 input.addEventListener("click", module.inputClickListener);
-
+input.addEventListener("input", module.inputListener);
+select.addEventListener('change', module.selectListener);
 
 // Event Listeners registration
 /*
 startBtn.addEventListener("click", module.btnListener);
 searchBtn.addEventListener("click", module.btnListener);
 reverseBtn.addEventListener("click", module.reverseBtnListener);
-input.addEventListener("input", module.inputListener);
+
 
 input.addEventListener("blur", module.inputBlurListener);
 sortName.addEventListener("click", module.handleSort);

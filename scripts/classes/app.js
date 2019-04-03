@@ -44,19 +44,28 @@ function fetchApiData(app){
       .then(function(data) {
         app.setWorld = new World([...data]); 
         app.setSearchBook = new SearchBook();
-        app.getSearchBook.loadSystemSearch('stan', 'Search Description');
+        
+        //app.getSearchBook.loadSystemSearch('stan', 'Search Description');
         //console.log(app.getSearchBook.runSystemSearch(0, app.getWorld));
-        app.getSearchBook.getSystemSearches[0].runSearch(app.getWorld);
-        app.getSearchBook.loadDefaultSystemSearches();
-        /*app.getSearchBook.getSystemSearches[1].runSearch(app.getWorld);
-        app.getSearchBook.getSystemSearches[2].runSearch(app.getWorld);
+       // app.getSearchBook.getSystemSearches[0].runSearch(app.getWorld);
+        return app;
+        
+        /*app.getSearchBook.getSystemSearches[2].runSearch(app.getWorld);
         app.getSearchBook.getSystemSearches[3].runSearch(app.getWorld);
         app.getSearchBook.getSystemSearches[4].runSearch(app.getWorld);*/
         
-        console.log(app.getSearchBook.getSystemSearches);
-        app.print.printBody(app.getWorld.countries);
+        //console.log(app.getSearchBook.getSystemSearches);
+        //app.print.printBody(app.getWorld.countries);
 
        /// module.showCountries(countries);
+      })
+      .then((app)=>{
+        return app.getSearchBook.getSystemSearches[3].runSearch(app.getWorld);
+        //app.print.printBody(app.getSearchBook.getSystemSearches[0].runSearch(app.getWorld).getResult);
+      })
+      .then((search)=>{
+        
+        //app.print.printBody(search.getResult);
       })
       .catch(function(error) {
         console.log(error);

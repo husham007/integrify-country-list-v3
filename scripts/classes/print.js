@@ -16,4 +16,11 @@ export default class Print {
         module.showCountries(countries);
     }
 
+    addToList(search){
+        let list = document.getElementById('list');
+        let option = document.createElement("option");
+        option.text = search.description;
+        list.add(option);
+    }
+
 }
