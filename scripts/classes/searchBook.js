@@ -38,15 +38,28 @@ export default class SearchBook {
     }
 
     loadDefaultSystemSearches(){
-        let searchKey = 'Asia';
+        let searchKey = '';
         this.createSystemSearch(searchKey, function (world, key){
-            return regionalCountries(world, key);
+            return countries(world, key);
+        },
+        'All Countries');
+
+        searchKey = 'Asia';
+        this.createSystemSearch(searchKey, function (world, key){
+            return countries(world, key);
         },
         'Asian Countries');
 
         searchKey = 'Europe';
         this.createSystemSearch(searchKey, function (world, key){
-            return regionalCountries(world, key);
+            return countries(world, key);
+        },
+        'Europe Countries');
+
+
+        searchKey = 'Africa';
+        this.createSystemSearch(searchKey, function (world, key){
+            return countries(world, key);
         },
         'Europe Countries');
     }
@@ -61,7 +74,7 @@ export default class SearchBook {
 
 }
 
-function regionalCountries (world, key){
+function countries (world, key){
     console.log(key);
       return  world.getCountries.filter((country)=>{
             return country.region.includes(key);

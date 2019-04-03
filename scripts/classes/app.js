@@ -2,6 +2,7 @@
 
 import World from './world.js'
 import SearchBook from './searchBook.js'
+import Print from './print.js';
 
 export default class App {
     url = undefined;
@@ -12,6 +13,7 @@ export default class App {
   constructor(url) {
     this.url = url;
     this.fetchData();
+    this.print = new Print();
   }
 
   set setWorld(world) {
@@ -46,9 +48,13 @@ function fetchApiData(app){
         //console.log(app.getSearchBook.runSystemSearch(0, app.getWorld));
         app.getSearchBook.getSystemSearches[0].runSearch(app.getWorld);
         app.getSearchBook.loadDefaultSystemSearches();
-        app.getSearchBook.getSystemSearches[1].runSearch(app.getWorld);
+        /*app.getSearchBook.getSystemSearches[1].runSearch(app.getWorld);
         app.getSearchBook.getSystemSearches[2].runSearch(app.getWorld);
+        app.getSearchBook.getSystemSearches[3].runSearch(app.getWorld);
+        app.getSearchBook.getSystemSearches[4].runSearch(app.getWorld);*/
+        
         console.log(app.getSearchBook.getSystemSearches);
+        app.print.printBody(app.getWorld.countries);
 
        /// module.showCountries(countries);
       })

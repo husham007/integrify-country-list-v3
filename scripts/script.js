@@ -28,13 +28,16 @@ const app = new App(url);
 
 //console.log(app);
 
+input.addEventListener("click", module.inputClickListener);
+
+
 // Event Listeners registration
 /*
 startBtn.addEventListener("click", module.btnListener);
 searchBtn.addEventListener("click", module.btnListener);
 reverseBtn.addEventListener("click", module.reverseBtnListener);
 input.addEventListener("input", module.inputListener);
-input.addEventListener("click", module.inputClickListener);
+
 input.addEventListener("blur", module.inputBlurListener);
 sortName.addEventListener("click", module.handleSort);
 sortCapital.addEventListener("click", module.handleSort);

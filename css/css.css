@@ -96,6 +96,7 @@ img {
 }
 
 .radio-wrapper {
+  display: none;
   text-align: center;
   background-color: #fafbfc;
   margin-top: 2rem;
@@ -107,6 +108,7 @@ img {
 }
 
 .radio-wrapper div {
+  display: none;
   flex: 1;
 }
 

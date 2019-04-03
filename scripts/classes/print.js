@@ -1,4 +1,7 @@
-class Print {
+import * as module from "../functions.js";
+
+
+export default class Print {
     header = undefined;
     menu = undefined;
     body = undefined;
@@ -6,7 +9,11 @@ class Print {
     
 
     printHeader(){
-        
+
+    }
+
+    printBody(countries){
+        module.showCountries(countries);
     }
 
 }
