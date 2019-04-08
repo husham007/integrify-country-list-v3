@@ -9,21 +9,27 @@ export default class Search {
         this.description = description;
     }
 
-    runSearch(arr){
-
+    executor = (arr, obj, app)=>{
+        
+       // console.log(obj);
       //  this.result = this.method(arr, this.input);
-      this.method(arr, this.input)
+      if (typeof obj.method == 'string'){
+         
+          obj.method = new Function('return ' + obj.method)();
+      }
+      obj.method(arr, obj.input)
       .then((result)=>{
          
-         this.result = result;
+         obj.result = result;
          //console.log(this);
-         return this;
+         return obj;
           
                   
       })
       .then((search)=>{
-         
-        app.print.printBody(search.getResult);
+        // console.log(this);
+         //console.log(search);
+        app.print.printBody(search.result);
         //console.log(this);
     
          

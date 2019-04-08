@@ -128,7 +128,7 @@ function validInputs() {
   if (!module.input.value) {
     module.errorElement.className = "result-red";
     module.errorElement.textContent = "Please Enter in the search field ";
-    return false;
+    return true;
   } else if (!module.input.value.match(/^[A-Za-z]+$/g)) {
     module.errorElement.className = "result-red";
     module.errorElement.textContent = "Only Alphabetical keys dude!! :) ";
@@ -198,4 +198,12 @@ function sort(arr, byKey){
       return 1;
     }
   })
+}
+
+
+export const countries = (world, key) => {
+  //console.log(key);
+  return world.getCountries.filter(country => {
+    return country.region.includes(key);
+  });
 }
