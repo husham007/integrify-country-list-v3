@@ -83,7 +83,7 @@ export function inputListener() {
   }),
   'User Search');
   //console.log(search);
-  search.runSearch(module.app.getWorld);
+  search.executor(module.app.getWorld, search, module.app);
   //console.log(search);
   //module.app.print.printBody(search.getResult);    
   
