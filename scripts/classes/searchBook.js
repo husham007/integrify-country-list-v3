@@ -24,25 +24,29 @@ export default class SearchBook {
       //console.log(JSON.parse(window.localStorage.getItem('searchBook')));
     } else {
       searchBook.systemSearches.forEach(search => {
-        this.systemSearches.push(
+        /*this.systemSearches.push(
           new Search(
             search.type,
             search.input,
             search.method,
             search.description
           )
-        );
+        );*/
+        const systemSearch = new Search("system", search.input, search.method, search.description);
+    this.addSystemSearch(systemSearch);   
+    app.print.addToList(systemSearch);
       });
 
       searchBook.userSearches.forEach(search => {
-        this.userSearches.push(
+       /* this.userSearches.push(
           new Search(
             search.type,
             search.input,
             search.method,
             search.description
           )
-        );
+        );*/
+
       });
      
       this.currentSearch = new Search (searchBook.currentSearch.type,
@@ -107,7 +111,9 @@ export default class SearchBook {
       searchKey,
       function(world, key) {
         return new Promise((resolve, reject) => {
-          let result = functions.countries(world, key);
+          let result = world.getCountries.filter(country => {
+            return country.region.includes(key);
+          });
           if (result) {
             resolve(result);
           } else reject("error");
@@ -121,7 +127,9 @@ export default class SearchBook {
       searchKey,
       function(world, key) {
         return new Promise((resolve, reject) => {
-          let result = countries(world, key);
+          let result = world.getCountries.filter(country => {
+            return country.region.includes(key);
+          });
           if (result) {
             resolve(result);
           } else reject("error");
@@ -135,7 +143,9 @@ export default class SearchBook {
       searchKey,
       function(world, key) {
         return new Promise((resolve, reject) => {
-          let result = countries(world, key);
+          let result = world.getCountries.filter(country => {
+            return country.region.includes(key);
+          });
           if (result) {
             resolve(result);
           } else reject("error");

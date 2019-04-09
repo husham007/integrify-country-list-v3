@@ -166,7 +166,7 @@ export function selectListener(e) {
       return true;
     }
   });
-  option.runSearch(module.app.getWorld);
+  option.executor(module.app.getWorld, option, module.app);
 }
 
 
