@@ -22,6 +22,7 @@ function showCountry(country) {
   let image = document.createElement("img");
 
   countryDiv.className = "country";
+  imageDiv.className = 'image';
   // countryContent.className = 'country-content';
   image.src = country.flag;
   content.innerHTML =`<p>${country.name}, 
